@@ -1,0 +1,6 @@
+[submodule "YCSB"]
+	path = YCSB
+	url = https://github.com/ncnight/YCSB.git
+[submodule "tweezer"]
+	path = tweezer
+	url = https://github.com/ncnight/tweezer.git
