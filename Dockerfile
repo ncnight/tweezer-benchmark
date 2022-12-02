@@ -4,7 +4,7 @@ ADD tweezer /root/tweezer
 WORKDIR /root
 
 RUN apt update && apt install git build-essential cmake -y
-RUN git clone https://github.com/gflags/gflags.git && && cd gflags && mkdir build && cd build && cmake .. && make install
+RUN git clone https://github.com/gflags/gflags.git && cd gflags && mkdir build && cd build && cmake .. && make install
 RUN git clone https://github.com/google/snappy.git && cd snappy && mkdir build && cd build && cmake -DSNAPPY_BUILD_TESTS=OFF -DSNAPPY_BUILD_BENCHMARKS=OFF .. && make install
 
 RUN git clone -b OpenSSL_1_1_1i https://github.com/openssl/openssl.git
@@ -18,3 +18,5 @@ RUN chmod +x compile.sh && ./compile.sh
 ADD YCSB /root/YCSB
 ADD ycsb-compile.sh /root/ycsb-compile.sh
 RUN chmod +x ycsb-compile.sh && ./ycsb-compile.sh
+ADD runspeicher.sh /root/runspeicher.sh
+ADD runtweezer.sh /root/runtweezer.sh
