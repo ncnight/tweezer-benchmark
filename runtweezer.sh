@@ -1,4 +1,5 @@
 #!/bin/bash
-cd YCSB
-mvn -pl site.ycsb:tweezer-binding -am package
-bin/ycsb load tweezer -s -P workloads/workloada -p tweezer.dir=/tmp/db-storage
+cd db_benchmarks
+TEST_TMPDIR=/tmp/db-storage ./tweezer_bench
+
+rm /tmp/db-storage/*

@@ -1,4 +1,5 @@
 #!/bin/bash
-cd YCSB
-mvn -pl site.ycsb:speicher-binding -am clean package
-bin/ycsb load speicher -s -P workloads/workloada -p speicher.dir=/tmp/db-storage
+cd db_benchmarks
+TEST_TMPDIR=/tmp/db-storage ./speicher_bench
+
+rm /tmp/db-storage/*

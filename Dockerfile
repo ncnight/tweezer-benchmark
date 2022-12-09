@@ -17,6 +17,5 @@ ADD compile.sh /root/compile.sh
 RUN chmod +x compile.sh && ./compile.sh
 ADD YCSB /root/YCSB
 ADD ycsb-compile.sh /root/ycsb-compile.sh
-RUN chmod +x ycsb-compile.sh && ./ycsb-compile.sh
 ADD runspeicher.sh /root/runspeicher.sh
 ADD runtweezer.sh /root/runtweezer.sh
